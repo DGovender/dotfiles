@@ -36,7 +36,7 @@ URxvt*scrollBar_right:   false
 
 URxvt*transparent:       false
 
-URxvt.font: xft:DroidSansMono Nerd Font Mono:pixelsize=15
+URxvt.font: xft:DroidSansMono Nerd Font Mono:pixelsize=12
 URxvt.letterSpace: 0
 
 *antialias:  false
