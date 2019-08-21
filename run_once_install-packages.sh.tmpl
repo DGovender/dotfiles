@@ -1,5 +1,41 @@
 #!/bin/bash
 
 {{ if eq .chezmoi.hostname "nexus" -}}
+    # Install yay
+    git clone https://aur.archlinux.org/yay.git
+    cd ~/yay
+    makepkg -si
+    cd ..
+    rm -rf yay
 
+    # Package for Dotfile Management
+    yay -S chezmoi
+    chezmoi init 
+
+    # Packages for Web-Browsing
+    yay -S firefox qutebrowser
+
+    # Packages for Note Taking
+    yay -S joplin
+
+    # Packages for Programming
+    yay -S gitflow-avh code
+
+    # Packages for Music
+    yay -S mopidy-spotify mopidy-spotify-web
+
+    # Packages for Video
+    yay -S mpv youtube-dl
+
+    # Packages for Documents
+    yay -S onlyoffice-bin
+
+    # Packages for Ricing
+    yay -S nerd-fonts-droid-sans-mono urxvtconfig
+
+    # Packages for Python Development
+    yay -S python-pip python-virtualenvwrapper
+    
+    # Packages for Virtualisation
+    yay -S virtualbox vagrant
 {{ end -}}
