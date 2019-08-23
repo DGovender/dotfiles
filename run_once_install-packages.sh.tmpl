@@ -42,7 +42,7 @@
     }
 
     # Upgrade System
-    yay -Syyu --noconfirm
+    yay -Syyu --noconfirm;
 
     # Change Shell
     if [ echo $SHELL != "/usr/bin/zsh" ]; then
@@ -67,11 +67,11 @@
             "nerd-fonts-droid-sans-mono"
             "urxvtconfig"
             "python-pip"
-            "python-virtualenvwrapper"
             "linux419-virtualbox-host-modules"
             "virtualbox"
             "vagrant"
-            "klavaro");
+            "klavaro"
+            "rofi");
             
     _installPackages "${packages[@]}";
 
