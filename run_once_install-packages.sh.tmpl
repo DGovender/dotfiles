@@ -2,6 +2,10 @@
 
 {{ if eq .chezmoi.hostname "nexus" -}}
 
+    # Variables
+    wallpaper=(~/Pictures/Wallpaper/Anime/soma-wallpaper.png)
+    lockscreen=(~/Pictures/Wallpaper/Anime/yue-wallpaper.png)
+
     # Functions
     _isInstalled() {
     package="$1";
@@ -71,9 +75,16 @@
             "virtualbox"
             "vagrant"
             "klavaro"
-            "rofi");
+            "rofi"
+            "polybar"
+            "betterlockscreen"
+            "nitrogen");
             
     _installPackages "${packages[@]}";
-
+    
+    # Set LockScreen
+    betterlockscreen -u $lockscreen
+    # Set Wallpaper
+    nitrogen --set-zoom-fill $wallpaper
 {{ end -}}
 
