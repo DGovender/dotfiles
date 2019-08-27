@@ -75,7 +75,9 @@
             "virtualbox"
             "vagrant"
             "klavaro"
+            "bitwarden-cli"
             "rofi"
+            "bitwarden-rofi"
             "polybar"
             "betterlockscreen"
             "nitrogen"
@@ -83,6 +85,7 @@
             
     _installPackages "${packages[@]}";
     
+    printf "\n";
     # Set LockScreen
     betterlockscreen -u $lockscreen
     # Set Wallpaper
