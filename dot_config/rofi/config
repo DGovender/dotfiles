@@ -1,4 +1,4 @@
-rofi.modi: window,drun,ssh
+rofi.modi: window,drun,ssh,calc
 
 rofi.color-enabled: true
 
