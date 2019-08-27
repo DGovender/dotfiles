@@ -144,14 +144,15 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
+set $ws4 4:
+set $ws5 5:
+set $ws6 6:
+set $ws7 7:
+set $ws8 8:
+set $ws9 9:
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -162,6 +163,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -172,6 +174,7 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -182,6 +185,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
@@ -270,9 +274,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
-
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
@@ -290,10 +291,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # Display Configuration
-{{ if eq .chezmoi.hostname "nexus" -}}
-        exec_always "xrandr --output LVDS-0 --off"
-{{ end -}}
-
+exec_always "xrandr --output LVDS-0 --off"
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources
@@ -337,7 +335,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-#   font xft:URWGothic-Book 11
+        font xft:URWGothic-Book,DroidSansMono Nerd Font Mono 12
 	strip_workspace_numbers yes
 
     colors {
