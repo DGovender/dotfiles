@@ -48,6 +48,25 @@
     # Upgrade System
     yay -Syyu --noconfirm;
 
+    # Set up OH_MY_ZSH
+    DIR="$HOME/.oh-my-zsh";
+    if [ -d "$DIR" ]; then
+        echo "${DIR} is Installed";
+    else
+        echo "${DIR} will be installed";
+        sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
+    fi;
+
+    #Set up PowerLevel9k Oh_MY_ZSH Theme
+    DIR="$HOME/.oh-my-zsh/custom/themes/powerlevel9k";
+    if [ -d "$DIR" ]; then
+        echo "${DIR} is Installed";
+    else
+        echo "${DIR} will be installed";
+        git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k;
+    fi;
+
+
     # Change Shell
     if [ echo $SHELL != "/usr/bin/zsh" ]; then
         echo "ZSH is not the default shell";
