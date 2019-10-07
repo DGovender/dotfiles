@@ -7,13 +7,23 @@ Plug 'joshdick/onedark.vim'
 " Status Bar Plugin
 Plug 'itchyny/lightline.vim'
 
+" Fuzzy Search Plugin
+Plug '/usr/bin/fzf'
+Plug 'junegunn/fzf.vim'
+
+" Autocompletion Plugin
+Plug 'neoclide/coc.nvim'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+" Key Bindings Remap
+inoremap jj <esc>
+
 " LightLine Theme Config
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
-
-" List ends here. Plugins become visible to Vim after this call.
-call plug#end()
 
 " Theme Config
 syntax on
