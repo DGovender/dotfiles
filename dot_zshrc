@@ -90,7 +90,7 @@ POWERLEVEL9K_BATTERY_LOW_COLOR="red"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf git-flow-avh sudo virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,6 +119,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias neovim="$EDITOR ~/.config/nvim/init.vim"
+alias neovimC="chezmoi edit ~/.config/nvim/init.vim"
 
 # VirtualEnvWrapper
 export WORKON_HOME=$HOME/.virtualenvs
