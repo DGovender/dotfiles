@@ -126,3 +126,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 source /usr/bin/virtualenvwrapper.sh
+
+# Environment Variables
+export EDITOR=nvim
+export BROWSER=/usr/bin/firefox
