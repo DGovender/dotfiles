@@ -119,10 +119,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias neovim="$EDITOR ~/.config/nvim/init.vim"
-alias neovimC="chezmoi edit ~/.config/nvim/init.vim"
+alias neovim="~/.config/nvim/init.vim"
 
 # VirtualEnvWrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 source /usr/bin/virtualenvwrapper.sh
