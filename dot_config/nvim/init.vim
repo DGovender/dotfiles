@@ -12,7 +12,7 @@ Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Autocompletion Plugin
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim',  {'branch': 'release'}
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
